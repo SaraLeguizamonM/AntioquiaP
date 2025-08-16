@@ -1,13 +1,9 @@
-// Comentarios
-const input = document.getElementById("comentarioInput");
-const btn = document.getElementById("agregarComentario");
-const contenedor = document.getElementById("comentarios");
-
-btn.addEventListener("click", () => {
-  if (input.value.trim() !== "") {
-    const nuevoComentario = document.createElement("p");
-    nuevoComentario.textContent = input.value;
-    contenedor.appendChild(nuevoComentario);
-    input.value = "";
-  }
+// Scroll suave en navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
 });
