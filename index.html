@@ -4,46 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antioquia Cultural</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Encabezado -->
   <header>
     <h1>Antioquia Cultural</h1>
-    <nav>
-      <button onclick="scrollToSection('orgullo')">Descubre más</button>
-    </nav>
+    <button id="discoverBtn">Descubre Más</button>
   </header>
 
-  <!-- Sección Orgullo -->
+  <!-- Orgullo Antioqueño -->
   <section id="orgullo">
     <h2>El Orgullo de Ser Antioqueño</h2>
-    <p>Un recorrido por nuestra cultura, historia y tradiciones.</p>
+    <p>La riqueza cultural y la pujanza de nuestra gente hacen de Antioquia un lugar único en el mundo.</p>
   </section>
 
   <!-- Festín para el paladar -->
   <section id="paladar">
-    <h2>Un Festín para el Paladar</h2>
+    <h2>Un festín para el paladar</h2>
     <div class="receta">
       <h3>Bandeja Paisa</h3>
-      <p><strong>Ingredientes:</strong> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
-      <p><strong>Preparación:</strong> Cocina los frijoles... Sirve todo en un plato grande con arepa y aguacate fresco.</p>
+      <p><b>Ingredientes:</b> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
+      <p><b>Preparación:</b> Cocina los frijoles hasta que estén blandos. Fríe los chicharrones, los plátanos y los huevos. Cocina el arroz y la carne molida. Sirve todo en un plato grande con una arepa y aguacate fresco.</p>
     </div>
     <div class="receta">
       <h3>Sancocho</h3>
-      <p><strong>Ingredientes:</strong> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
-      <p><strong>Preparación:</strong> Cocina las carnes en agua con sal... Sirve caliente con arroz y aguacate.</p>
+      <p><b>Ingredientes:</b> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
+      <p><b>Preparación:</b> Cocina las carnes en agua con sal, cebolla y ajo. Agrega los vegetales y cocina hasta que todo esté tierno. Sirve caliente con cilantro picado, arroz y aguacate.</p>
     </div>
     <div class="receta">
       <h3>Arepa</h3>
-      <p><strong>Ingredientes:</strong> Harina de maíz precocida blanca, agua tibia, sal.</p>
-      <p><strong>Preparación:</strong> Mezcla la harina... Ásalas en una plancha hasta dorar.</p>
+      <p><b>Ingredientes:</b> Harina de maíz precocida blanca, agua tibia, sal.</p>
+      <p><b>Preparación:</b> Mezcla la harina de maíz con agua tibia y sal hasta obtener una masa suave. Forma bolas y aplástalas. Ásalas en una plancha hasta que estén doradas.</p>
     </div>
     <div class="receta">
       <h3>Mazamorra</h3>
-      <p><strong>Ingredientes:</strong> Maíz peto, leche, panela en polvo o bocadillo.</p>
-      <p><strong>Preparación:</strong> Remoja el maíz... Sírvela fría con panela o bocadillo.</p>
+      <p><b>Ingredientes:</b> Maíz peto, leche, panela en polvo o bocadillo de guayaba.</p>
+      <p><b>Preparación:</b> Remoja el maíz la noche anterior y cocínalo hasta que esté blando. Agrega leche y deja hervir a fuego bajo. Sirve fría y endulza con panela o bocadillo.</p>
     </div>
   </section>
 
@@ -51,47 +49,48 @@
   <section id="mitos">
     <h2>Mitos y Leyendas</h2>
     <div class="mito">
-      <img src="imagenes/la-madre-monte.jpg" alt="La Madre Monte">
-      <p><strong>La Madre Monte:</strong> Protectora de los bosques...</p>
+      <img src="img/la_madre_monte.jpg" alt="La Madre Monte">
+      <p><b>La Madre Monte:</b> Espíritu guardián de la naturaleza, que protege los bosques y castiga a quienes los dañan.</p>
     </div>
     <div class="mito">
-      <img src="imagenes/el-sombreron.jpg" alt="El Sombrerón">
-      <p><strong>El Sombrerón:</strong> Espíritu misterioso...</p>
+      <img src="img/el_sombreron.jpg" alt="El Sombrerón">
+      <p><b>El Sombrerón:</b> Personaje misterioso que aparece en los caminos solitarios con un enorme sombrero.</p>
     </div>
   </section>
 
-  <!-- Escudo con carrusel -->
+  <!-- Escudo en carrusel -->
   <section id="escudo">
-    <h2>Escudo de Antioquia</h2>
-    <div class="carrusel">
+    <h2>El Alma de Antioquia</h2>
+    <div class="carousel">
       <div class="slide active">
-        <img src="imagenes/escudo-antioquia.png" alt="Escudo de Antioquia">
+        <img src="img/escudo.png" alt="Escudo de Antioquia">
       </div>
       <div class="slide">
-        <blockquote>
-          <p>"El Alma de Antioquia"</p>
-          <p>"La pujanza de nuestra gente es la fuerza que mueve montañas." – Dicho Popular</p>
-          <p>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra." – Tradición Paisa</p>
-          <p>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma." – Reflexión Cultural</p>
-        </blockquote>
+        <blockquote>"La pujanza de nuestra gente es la fuerza que mueve montañas." <br>– Dicho Popular</blockquote>
       </div>
-      <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moverSlide(1)">&#10095;</button>
+      <div class="slide">
+        <blockquote>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra." <br>– Tradición Paisa</blockquote>
+      </div>
+      <div class="slide">
+        <blockquote>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma." <br>– Reflexión Cultural</blockquote>
+      </div>
     </div>
   </section>
 
-  <!-- Historias -->
+  <!-- Historias tipo comentarios -->
   <section id="historias">
-    <h2>Historias de Nuestra Gente</h2>
-    <div id="comentarios"></div>
-    <textarea id="nuevoComentario" placeholder="Escribe tu historia..."></textarea>
-    <button onclick="agregarComentario()">Publicar</button>
+    <h2>Comparte tu historia</h2>
+    <form id="historiaForm">
+      <textarea id="historiaInput" placeholder="Escribe aquí tu historia..."></textarea>
+      <button type="submit">Publicar</button>
+    </form>
+    <div id="historiaList"></div>
   </section>
 
   <!-- Hospedaje -->
   <section id="hospedaje">
-    <h2>¿Dónde Hospedarse y Qué Hacer?</h2>
-    <p>Hospédate en fincas cafeteras, eco-hoteles y posadas rurales. Disfruta de caminatas, recorridos históricos y paisajes únicos.</p>
+    <h2>¿Dónde hospedarse y qué hacer?</h2>
+    <p>Encuentra hoteles, fincas cafeteras y hostales en el corazón de Antioquia. Vive la experiencia del café, visita pueblos mágicos como Jardín y Santa Fe de Antioquia, y disfruta de caminatas por la naturaleza.</p>
   </section>
 
   <!-- Créditos -->
@@ -104,3 +103,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
