@@ -1,33 +1,34 @@
-// Scroll hacia sección
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+// Botón "Descubre Más"
+document.getElementById("discoverBtn").addEventListener("click", () => {
+  document.getElementById("orgullo").scrollIntoView({ behavior: "smooth" });
+});
+
+// Carrusel automático
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach((s, i) => {
+    s.classList.remove("active");
+    if (i === index) s.classList.add("active");
+  });
 }
 
-// Carrusel
-let slideIndex = 0;
-mostrarSlide(slideIndex);
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 4000);
 
-function moverSlide(n) {
-  mostrarSlide(slideIndex += n);
-}
-
-function mostrarSlide(n) {
-  let slides = document.getElementsByClassName("slide");
-  if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1 }
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
+// Historias tipo comentarios
+document.getElementById("historiaForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const input = document.getElementById("historiaInput");
+  if (input.value.trim() !== "") {
+    const newHistoria = document.createElement("div");
+    newHistoria.classList.add("historia");
+    newHistoria.textContent = input.value;
+    document.getElementById("historiaList").appendChild(newHistoria);
+    input.value = "";
   }
-  slides[slideIndex].classList.add("active");
-}
+});
 
-// Comentarios dinámicos
-function agregarComentario() {
-  let nuevoComentario = document.getElementById("nuevoComentario").value;
-  if (nuevoComentario.trim() === "") return;
-  
-  let div = document.createElement("div");
-  div.textContent = nuevoComentario;
-  document.getElementById("comentarios").appendChild(div);
-  document.getElementById("nuevoComentario").value = "";
-}
