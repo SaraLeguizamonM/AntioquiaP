@@ -3,80 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cultura Ancestral</title>
+  <title>Antioquia - Cultura y Tradición</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Encabezado -->
-  <header class="header">
-    <h1>Cultura Ancestral</h1>
-    <p>Un viaje por las raíces y tradiciones</p>
-    <a href="#descubre" class="btn">Descubre más</a>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Antioquia, tierra de historia y tradición</h1>
+    <button onclick="scrollToSection('orgullo')">Descubre Más</button>
   </header>
 
-  <!-- Escudo y frases -->
-  <section id="descubre" class="section">
-    <h2>Escudo y Frases</h2>
-    <div class="carousel">
-      <div class="carousel-item active">
-        <img src="escudo.png" alt="Escudo cultural">
-      </div>
-      <div class="carousel-item">
-        <blockquote>"La tierra no nos pertenece, nosotros pertenecemos a ella."</blockquote>
-      </div>
-      <div class="carousel-item">
-        <blockquote>"Nuestra raíz vive en cada paso sobre el suelo sagrado."</blockquote>
-      </div>
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
+  <!-- Orgullo -->
+  <section id="orgullo" class="section">
+    <h2>El Orgullo de Ser Antioqueño</h2>
+    <p>
+      Antioquia es un departamento lleno de pujanza, cultura, gastronomía y tradición. 
+      Sus paisajes, su gente y su historia lo convierten en un lugar único.
+    </p>
+  </section>
+
+  <!-- Festín para el paladar -->
+  <section class="section" id="paladar">
+    <h2>Un festín para el paladar</h2>
+    <div class="receta">
+      <h3>Bandeja Paisa</h3>
+      <p><strong>Ingredientes:</strong> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
+      <p><strong>Preparación:</strong> Cocina los frijoles hasta que estén blandos. Fríe los chicharrones, plátanos y huevos. Cocina el arroz y la carne molida. Sirve todo en un plato grande con arepa y aguacate.</p>
+    </div>
+    <div class="receta">
+      <h3>Sancocho</h3>
+      <p><strong>Ingredientes:</strong> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
+      <p><strong>Preparación:</strong> Cocina las carnes en agua con sal, cebolla y ajo. Agrega los vegetales hasta que estén tiernos. Sirve caliente con cilantro, arroz y aguacate.</p>
+    </div>
+    <div class="receta">
+      <h3>Arepa</h3>
+      <p><strong>Ingredientes:</strong> Harina de maíz precocida blanca, agua tibia, sal.</p>
+      <p><strong>Preparación:</strong> Mezcla harina con agua tibia y sal. Forma bolas, aplástalas y ásalas hasta que estén doradas.</p>
+    </div>
+    <div class="receta">
+      <h3>Mazamorra</h3>
+      <p><strong>Ingredientes:</strong> Maíz peto, leche, panela en polvo o bocadillo de guayaba.</p>
+      <p><strong>Preparación:</strong> Remoja el maíz, cocínalo hasta que esté blando. Agrega leche y hierve a fuego bajo. Endulza con panela o bocadillo.</p>
     </div>
   </section>
 
   <!-- Mitos -->
-  <section class="section">
+  <section class="section" id="mitos">
     <h2>Mitos y Leyendas</h2>
     <div class="mito">
-      <img src="mito1.png" alt="Imagen mito">
-      <p>Cuenta la tradición que en las noches de luna llena aparece el espíritu guardián del bosque...</p>
+      <img src="imagenes/mohan.jpg" alt="El Mohán">
+      <h3>El Mohán</h3>
+      <p>Ser mítico que protege los ríos y encanta a quienes se acercan a ellos.</p>
     </div>
     <div class="mito">
-      <img src="mito2.png" alt="Imagen mito">
-      <p>Se dice que los ríos guardan voces antiguas que susurran a quienes saben escuchar...</p>
+      <img src="imagenes/madre_monte.jpg" alt="La Madre Monte">
+      <h3>La Madre Monte</h3>
+      <p>Guardián de los montes y castigador de quienes dañan la naturaleza.</p>
     </div>
   </section>
 
-  <!-- Recetas -->
-  <section class="section recetas">
-    <h2>Recetas Tradicionales</h2>
-    <div class="receta">
-      <h3>Sopa de Maíz</h3>
-      <p>Una preparación que combina el maíz, base de la cultura ancestral, con hierbas aromáticas.</p>
+  <!-- Escudo con carrusel -->
+  <section class="section" id="escudo">
+    <h2>Escudo y Frases</h2>
+    <div class="carousel">
+      <div class="carousel-item active">
+        <img src="imagenes/escudo.png" alt="Escudo de Antioquia">
+      </div>
+      <div class="carousel-item">
+        <blockquote>"La pujanza de nuestra gente es la fuerza que mueve montañas." – Dicho Popular</blockquote>
+        <blockquote>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra." – Tradición Paisa</blockquote>
+        <blockquote>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma." – Reflexión Cultural</blockquote>
+      </div>
     </div>
-    <div class="receta">
-      <h3>Bebida de Cacao</h3>
-      <p>El cacao, símbolo de abundancia, preparado con miel y especias.</p>
-    </div>
+    <button onclick="nextSlide()">⟶</button>
   </section>
 
-  <!-- Comentarios -->
-  <section class="section comentarios">
-    <h2>Historias de la Comunidad</h2>
-    <div class="comentarios-list">
-      <p>"Escuchar a mi abuela contar los mitos me hizo valorar nuestra historia." – Ana</p>
-      <p>"Probar estas recetas me conecta con mis raíces." – Luis</p>
-    </div>
+  <!-- Historias -->
+  <section class="section" id="historias">
+    <h2>Historias de la gente</h2>
+    <div id="comentarios"></div>
+    <textarea id="nuevoComentario" placeholder="Escribe tu historia..."></textarea>
+    <button onclick="agregarComentario()">Compartir</button>
   </section>
 
   <!-- Hospedaje -->
-  <section class="section hospedaje">
-    <h2>Hospedaje Cultural</h2>
-    <p>Vive una experiencia única alojándote en casas tradicionales rodeadas de naturaleza.</p>
+  <section class="section" id="hospedaje">
+    <h2>¿Dónde hospedarse y qué hacer?</h2>
+    <p>
+      Antioquia ofrece hoteles rurales, hostales en Medellín y fincas tradicionales. 
+      Puedes visitar Guatapé, el Peñol, el Pueblito Paisa, museos y rutas cafeteras.
+    </p>
   </section>
 
-  <!-- Pie de página -->
-  <footer class="footer">
-    <p>© 2025 Cultura Ancestral | Proyecto educativo</p>
+  <!-- Créditos -->
+  <footer>
+    <p>Un proyecto cultural del INEM José Félix de Restrepo.</p>
+    <p>© 2025 Antioquia. Todos los derechos reservados.</p>
+    <p>Creado por Sara Leguizamon</p>
   </footer>
 
   <script src="script.js"></script>
