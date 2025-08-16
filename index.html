@@ -3,107 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antioquia Cultural</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Cultura y Naturaleza</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAV -->
+  <!-- Encabezado -->
   <header>
+    <h1>Cultura y Naturaleza</h1>
     <nav>
-      <h1>Antioquia Cultural</h1>
       <ul>
-        <li><a href="#orgullo">Descubre Más</a></li>
-        <li><a href="#gastronomia">Gastronomía</a></li>
+        <li><a href="#introduccion">Inicio</a></li>
         <li><a href="#mitos">Mitos</a></li>
-        <li><a href="#escudo">Escudo</a></li>
-        <li><a href="#historias">Historias</a></li>
+        <li><a href="#recetas">Recetas</a></li>
+        <li><a href="#actividades">Actividades</a></li>
         <li><a href="#hospedaje">Hospedaje</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ORGULLO -->
-  <section id="orgullo" class="section">
-    <h2>El Orgullo de Ser Antioqueño</h2>
-    <p>Antioquia es tierra de montañas, café y gente pujante que lleva en su corazón el legado de los arrieros.</p>
+  <!-- Introducción -->
+  <section id="introduccion" class="seccion">
+    <h2>Bienvenido</h2>
+    <p>Explora la riqueza cultural y natural de nuestra tierra. Aquí encontrarás mitos ancestrales, recetas tradicionales, actividades únicas y mucho más.</p>
   </section>
 
-  <!-- GASTRONOMÍA -->
-  <section id="gastronomia" class="section">
-    <h2>Un Festín para el Paladar</h2>
-    <article>
-      <h3>Bandeja Paisa</h3>
-      <p><strong>Ingredientes:</strong> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
-      <p><strong>Preparación:</strong> Cocina los frijoles hasta que estén blandos. Fríe los chicharrones, los plátanos y los huevos. Cocina el arroz y la carne molida. Sirve todo en un plato grande con una arepa y aguacate fresco.</p>
-    </article>
-    <article>
-      <h3>Sancocho</h3>
-      <p><strong>Ingredientes:</strong> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
-      <p><strong>Preparación:</strong> Cocina las carnes en agua con sal, cebolla y ajo. Agrega los vegetales y cocina hasta que todo esté tierno. Sirve caliente con cilantro picado, arroz y aguacate.</p>
-    </article>
-    <article>
-      <h3>Arepa</h3>
-      <p><strong>Ingredientes:</strong> Harina de maíz precocida blanca, agua tibia, sal.</p>
-      <p><strong>Preparación:</strong> Mezcla la harina de maíz con agua tibia y sal hasta obtener una masa suave. Forma bolas, aplástalas y ásalas en plancha hasta que estén doradas.</p>
-    </article>
-    <article>
-      <h3>Mazamorra</h3>
-      <p><strong>Ingredientes:</strong> Maíz peto, leche, panela o bocadillo de guayaba.</p>
-      <p><strong>Preparación:</strong> Remoja el maíz desde la noche anterior. Cocínalo hasta que esté blando, agrega leche y deja hervir a fuego bajo. Sírvela fría y endúlzala con panela o bocadillo.</p>
-    </article>
-  </section>
-
-  <!-- MITOS -->
-  <section id="mitos" class="section">
+  <!-- Mitos -->
+  <section id="mitos" class="seccion">
     <h2>Mitos y Leyendas</h2>
-    <div class="mito">
-      <img src="imagenes/la_madre_monte.jpg" alt="La Madre Monte">
-      <p><strong>La Madre Monte:</strong> Protectora de los montes y ríos, castiga a quienes dañan la naturaleza.</p>
+    <div class="card">
+      <h3>El Guardián del Bosque</h3>
+      <p>Se dice que un espíritu protector cuida de los árboles y animales, castigando a quienes dañan la naturaleza.</p>
     </div>
-    <div class="mito">
-      <img src="imagenes/el_sombreron.jpg" alt="El Sombrerón">
-      <p><strong>El Sombrerón:</strong> Un hombre misterioso de gran sombrero que embruja a viajeros solitarios.</p>
-    </div>
-  </section>
-
-  <!-- ESCUDO -->
-  <section id="escudo" class="section">
-    <h2>Escudo y Frases</h2>
-    <div class="carousel">
-      <div class="carousel-item">
-        <img src="imagenes/escudo_antioquia.png" alt="Escudo de Antioquia">
-      </div>
-      <div class="carousel-item">
-        <blockquote>"La pujanza de nuestra gente es la fuerza que mueve montañas."</blockquote>
-        <blockquote>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra."</blockquote>
-        <blockquote>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma."</blockquote>
-      </div>
+    <div class="card">
+      <h3>La Laguna Encantada</h3>
+      <p>Una leyenda cuenta que cada luna llena, las aguas reflejan los rostros de ancestros protectores.</p>
     </div>
   </section>
 
-  <!-- HISTORIAS -->
-  <section id="historias" class="section">
-    <h2>Historias de Nuestra Gente</h2>
-    <div id="comentarios"></div>
-    <textarea id="comentarioInput" placeholder="Escribe tu historia aquí..."></textarea>
-    <button id="agregarComentario">Compartir</button>
+  <!-- Recetas -->
+  <section id="recetas" class="seccion">
+    <h2>Recetas Tradicionales</h2>
+    <div class="card">
+      <h3>Bebida de Cacao</h3>
+      <p>Una mezcla ancestral de cacao, especias y agua que alimentaba a comunidades enteras.</p>
+    </div>
+    <div class="card">
+      <h3>Sopa de Raíces</h3>
+      <p>Preparada con ingredientes locales, representa la conexión entre el hombre y la tierra.</p>
+    </div>
   </section>
 
-  <!-- HOSPEDAJE -->
-  <section id="hospedaje" class="section">
-    <h2>Recomendaciones de Hospedaje y Actividades</h2>
-    <p><strong>Hospedaje:</strong> Hoteles rurales, fincas cafeteras y eco-lodges en las montañas.</p>
-    <p><strong>Qué hacer:</strong> Recorridos cafeteros, senderismo por montañas, visitas a pueblos patrimoniales como Jardín y Santa Fe de Antioquia.</p>
+  <!-- Actividades -->
+  <section id="actividades" class="seccion">
+    <h2>Actividades</h2>
+    <ul>
+      <li>🌿 Caminatas ecológicas</li>
+      <li>🔥 Fogatas nocturnas</li>
+      <li>🥁 Taller de música ancestral</li>
+      <li>🍃 Meditación en la naturaleza</li>
+    </ul>
   </section>
 
-  <!-- CREDITOS -->
+  <!-- Hospedaje -->
+  <section id="hospedaje" class="seccion">
+    <h2>Hospedaje</h2>
+    <p>Disfruta de cabañas ecológicas construidas con materiales sostenibles, rodeadas de naturaleza.</p>
+  </section>
+
+  <!-- Créditos -->
   <footer>
-    <p>Un proyecto cultural del INEM José Félix de Restrepo.</p>
-    <p>© 2025 Antioquia. Todos los derechos reservados.</p>
-    <p>Creado por Sara Leguizamon</p>
+    <p>© 2025 Cultura y Naturaleza | Diseñado con inspiración ancestral 🌎</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
