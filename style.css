@@ -1,95 +1,89 @@
-/* Fuente y estilo general */
-body {
+/* Reset sencillo */
+* {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #f4f1ea;
-  color: #3e2f1c;
-  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-  background-repeat: repeat;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Encabezado */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
 header {
-  background: #8b5e3c;
+  background: #333;
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-nav ul li a {
-  color: #f4f1ea;
+nav a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-nav ul li a:hover {
-  color: #ffd39b;
+nav a:hover {
+  color: #ffcc00;
 }
 
 /* Secciones */
-.seccion {
-  padding: 40px 20px;
+main {
+  padding: 20px;
   max-width: 900px;
   margin: auto;
 }
 
-.seccion h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #8b5e3c;
-  display: inline-block;
-  padding-bottom: 5px;
+section {
+  margin-bottom: 40px;
 }
 
-/* Tarjetas */
-.card {
-  background: #e6d8c3;
-  border: 2px solid #8b5e3c;
+section h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Galería */
+.galeria .imagenes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 200px;
   border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #4b3a24;
-}
-
-/* Actividades */
-#actividades ul {
-  list-style: none;
-  padding: 0;
-}
-
-#actividades ul li {
-  padding: 10px;
-  background: #d9c7a6;
-  margin-bottom: 10px;
-  border-left: 5px solid #8b5e3c;
-  font-weight: bold;
+.galeria img:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-  background: #8b5e3c;
+  background: #222;
   color: #fff;
   text-align: center;
   padding: 15px;
+  margin-top: 30px;
 }
 
