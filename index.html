@@ -3,200 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Antioqueñidad en La Pintada</title>
+  <title>Antioquia Cultural</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Encabezado -->
   <header>
-    <h1>Antioquia</h1>
+    <h1>Antioquia Cultural</h1>
     <nav>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#gastronomia">Gastronomía</a>
-      <a href="#mitos">Mitos</a>
-      <a href="#simbolo">Símbolo</a>
-      <a href="#historias">Historias</a>
-      <a href="#hospedaje">Hospedaje</a>
-      <a href="#ubicacion">Ubicación</a>
+      <button onclick="scrollToSection('orgullo')">Descubre más</button>
     </nav>
-    <button class="btn">Explorar</button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>La Fiesta de la Antioqueñidad</h1>
-    <p>Un viaje al corazón de nuestras tradiciones desde La Pintada.</p>
-    <button class="btn" onclick="document.getElementById('nosotros').scrollIntoView({behavior:'smooth'})">Descubre Más</button>
-  </section>
-
-  <!-- Nosotros -->
-  <section id="nosotros">
+  <!-- Sección Orgullo -->
+  <section id="orgullo">
     <h2>El Orgullo de Ser Antioqueño</h2>
-    <p>
-      La cultura antioqueña es un tapiz tejido con hilos de tradición, innovación y pujanza.  
-      Desde las montañas cafeteras hasta el río Cauca en La Pintada, nuestra identidad se expresa 
-      en el calor de la gente, el sabor de la gastronomía y las historias que nos unen.  
-    </p>
+    <p>Un recorrido por nuestra cultura, historia y tradiciones.</p>
   </section>
 
-  <!-- Gastronomía -->
-  <section id="gastronomia">
+  <!-- Festín para el paladar -->
+  <section id="paladar">
     <h2>Un Festín para el Paladar</h2>
-    <div class="cards">
-      <!-- Bandeja Paisa -->
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Bandeja_paisa.jpg" alt="Bandeja Paisa">
-        <h3>Bandeja Paisa</h3>
-        <p>Frijoles, arroz, carne molida, chicharrón, huevo frito, plátano, arepa y aguacate.</p>
-        <details>
-          <summary>Ver Receta</summary>
-          <p><b>Ingredientes:</b> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
-          <p><b>Preparación:</b> Cocina los frijoles hasta que estén blandos. Fríe los chicharrones, los plátanos y los huevos. Cocina el arroz y la carne molida. Sirve todo en un plato grande con una arepa y aguacate fresco.</p>
-        </details>
-      </div>
-      <!-- Sancocho -->
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Sancocho_de_gallina.JPG" alt="Sancocho">
-        <h3>Sancocho Antioqueño</h3>
-        <p>Sopa robusta con carnes, papa, yuca, plátano y mazorca.</p>
-        <details>
-          <summary>Ver Receta</summary>
-          <p><b>Ingredientes:</b> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
-          <p><b>Preparación:</b> Cocina las carnes en agua con sal, cebolla y ajo. Agrega los vegetales y cocina hasta que todo esté tierno. Sirve caliente con cilantro picado, arroz y aguacate.</p>
-        </details>
-      </div>
-      <!-- Arepa -->
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Arepa_antioque%C3%B1a.jpg" alt="Arepa Antioqueña">
-        <h3>Arepa Antioqueña</h3>
-        <p>Clásica compañera de mesa, hecha de maíz blanco y servida con quesito.</p>
-        <details>
-          <summary>Ver Receta</summary>
-          <p><b>Ingredientes:</b> Harina de maíz precocida blanca, agua tibia, sal.</p>
-          <p><b>Preparación:</b> Mezcla la harina de maíz con agua tibia y sal hasta obtener una masa suave. Forma bolas y aplástalas hasta que estén delgadas. Ásalas en una plancha caliente hasta dorar.</p>
-        </details>
-      </div>
-      <!-- Mazamorra -->
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Mazamorra_antioque%C3%B1a.jpg" alt="Mazamorra">
-        <h3>Mazamorra</h3>
-        <p>Postre de maíz pelado y leche, acompañado con panela o bocadillo.</p>
-        <details>
-          <summary>Ver Receta</summary>
-          <p><b>Ingredientes:</b> Maíz peto, leche, panela en polvo o bocadillo de guayaba.</p>
-          <p><b>Preparación:</b> Remoja el maíz desde la noche anterior. Cocínalo hasta que esté muy blando. Agrégale leche y deja hervir a fuego bajo. Sírvela fría y endúlzala al gusto.</p>
-        </details>
-      </div>
+    <div class="receta">
+      <h3>Bandeja Paisa</h3>
+      <p><strong>Ingredientes:</strong> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
+      <p><strong>Preparación:</strong> Cocina los frijoles... Sirve todo en un plato grande con arepa y aguacate fresco.</p>
+    </div>
+    <div class="receta">
+      <h3>Sancocho</h3>
+      <p><strong>Ingredientes:</strong> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
+      <p><strong>Preparación:</strong> Cocina las carnes en agua con sal... Sirve caliente con arroz y aguacate.</p>
+    </div>
+    <div class="receta">
+      <h3>Arepa</h3>
+      <p><strong>Ingredientes:</strong> Harina de maíz precocida blanca, agua tibia, sal.</p>
+      <p><strong>Preparación:</strong> Mezcla la harina... Ásalas en una plancha hasta dorar.</p>
+    </div>
+    <div class="receta">
+      <h3>Mazamorra</h3>
+      <p><strong>Ingredientes:</strong> Maíz peto, leche, panela en polvo o bocadillo.</p>
+      <p><strong>Preparación:</strong> Remoja el maíz... Sírvela fría con panela o bocadillo.</p>
     </div>
   </section>
 
   <!-- Mitos -->
   <section id="mitos">
     <h2>Mitos y Leyendas</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Madremonte.jpg" alt="Madremonte">
-        <h3>La Madremonte</h3>
-        <p>Protectora de los bosques, castiga a quienes dañan la naturaleza.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/El_Sombrer%C3%B3n.jpg" alt="El Sombrerón">
-        <h3>El Sombrerón</h3>
-        <p>Pequeño hombre con sombrero gigante que encanta a mujeres y caballos con su guitarra.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/La_Llorona.jpg" alt="La Llorona">
-        <h3>La Llorona</h3>
-        <p>Espíritu errante de una mujer que llora por sus hijos a orillas de los ríos.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Mohan.jpg" alt="El Mohán">
-        <h3>El Mohán</h3>
-        <p>Habitante de los ríos, protector de los peces y enemigo de los pescadores abusivos.</p>
-      </div>
+    <div class="mito">
+      <img src="imagenes/la-madre-monte.jpg" alt="La Madre Monte">
+      <p><strong>La Madre Monte:</strong> Protectora de los bosques...</p>
+    </div>
+    <div class="mito">
+      <img src="imagenes/el-sombreron.jpg" alt="El Sombrerón">
+      <p><strong>El Sombrerón:</strong> Espíritu misterioso...</p>
     </div>
   </section>
 
-  <!-- Símbolo -->
-  <section id="simbolo">
-    <h2>Nuestro Escudo y Alma</h2>
-    <div class="carousel">
-      <div class="carousel-item active">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Escudo_de_Antioquia.png" alt="Escudo de Antioquia" width="200">
-        <p>Adoptado en 1812, representa la minería, el río Cauca y la palmera como símbolo de libertad.</p>
+  <!-- Escudo con carrusel -->
+  <section id="escudo">
+    <h2>Escudo de Antioquia</h2>
+    <div class="carrusel">
+      <div class="slide active">
+        <img src="imagenes/escudo-antioquia.png" alt="Escudo de Antioquia">
       </div>
-      <div class="carousel-item">
-        <h3>El Alma de Antioquia</h3>
-        <blockquote>"La pujanza de nuestra gente es la fuerza que mueve montañas." – Dicho Popular</blockquote>
-        <blockquote>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra." – Tradición Paisa</blockquote>
-        <blockquote>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma." – Reflexión Cultural</blockquote>
+      <div class="slide">
+        <blockquote>
+          <p>"El Alma de Antioquia"</p>
+          <p>"La pujanza de nuestra gente es la fuerza que mueve montañas." – Dicho Popular</p>
+          <p>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra." – Tradición Paisa</p>
+          <p>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma." – Reflexión Cultural</p>
+        </blockquote>
       </div>
+      <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moverSlide(1)">&#10095;</button>
     </div>
-    <button onclick="moveCarousel(-1)">⟨</button>
-    <button onclick="moveCarousel(1)">⟩</button>
   </section>
 
   <!-- Historias -->
   <section id="historias">
     <h2>Historias de Nuestra Gente</h2>
     <div id="comentarios"></div>
-    <form id="form-historia">
-      <textarea placeholder="Escribe tu historia aquí..." required></textarea>
-      <button type="submit" class="btn">Compartir</button>
-    </form>
+    <textarea id="nuevoComentario" placeholder="Escribe tu historia..."></textarea>
+    <button onclick="agregarComentario()">Publicar</button>
   </section>
 
   <!-- Hospedaje -->
   <section id="hospedaje">
     <h2>¿Dónde Hospedarse y Qué Hacer?</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Hospedaje</h3>
-        <p>Encuentra hoteles acogedores en La Pintada, ideales para disfrutar de la cultura y la naturaleza.</p>
-      </div>
-      <div class="card">
-        <h3>Actividades</h3>
-        <p>Explora el río Cauca, disfruta de la gastronomía local y conoce los caminos de arrieros.</p>
-      </div>
-    </div>
+    <p>Hospédate en fincas cafeteras, eco-hoteles y posadas rurales. Disfruta de caminatas, recorridos históricos y paisajes únicos.</p>
   </section>
 
-  <!-- Ubicación -->
-  <section id="ubicacion">
-    <h2>El Epicentro: La Pintada</h2>
-    <p>Descubre el corazón cultural de La Pintada, Antioquia.</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.157093543906!2d-75.6083!3d5.7478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4689f3d4fef2e5%3A0xa861b9f3b8f8c3f0!2sLa%20Pintada%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1690000000000!5m2!1ses!2sco"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </section>
-
-  <!-- Footer -->
+  <!-- Créditos -->
   <footer>
-    <p>Un proyecto cultural del INEM José Félix de Restrepo.<br>
-    © 2025 Antioquia. Todos los derechos reservados.<br>
-    Creado por Sara Leguizamon</p>
+    <p>Un proyecto cultural del INEM José Félix de Restrepo.</p>
+    <p>© 2025 Antioquia. Todos los derechos reservados.</p>
+    <p>Creado por Sara Leguizamon</p>
   </footer>
 
-  <script>
-    // Carrusel
-    let current = 0;
-    function moveCarousel(dir) {
-      const items = document.querySelectorAll(".carousel-item");
-      items[current].classList.remove("active");
-      current = (current + dir + items.length) % items.length;
-      items[current].classList.add("active");
-    }
-
-    // Historias tipo comentarios
-    document.getElementById("form-historia").addEventListener("submit", e => {
-      e.preventDefault();
-      const text = e.target.querySelector("textarea").value;
-      const div = document.createElement("div");
-      div.className = "card";
-      div.innerHTML = `<p>${text}</p>`;
-      document.getElementById("comentarios").appendChild(div);
-      e.target.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
