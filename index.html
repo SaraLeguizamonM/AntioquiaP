@@ -3,104 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antioquia Cultural</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Cultura Ancestral</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Encabezado -->
-  <header>
-    <h1>Antioquia Cultural</h1>
-    <button id="discoverBtn">Descubre Más</button>
+  <header class="header">
+    <h1>Cultura Ancestral</h1>
+    <p>Un viaje por las raíces y tradiciones</p>
+    <a href="#descubre" class="btn">Descubre más</a>
   </header>
 
-  <!-- Orgullo Antioqueño -->
-  <section id="orgullo">
-    <h2>El Orgullo de Ser Antioqueño</h2>
-    <p>La riqueza cultural y la pujanza de nuestra gente hacen de Antioquia un lugar único en el mundo.</p>
-  </section>
-
-  <!-- Festín para el paladar -->
-  <section id="paladar">
-    <h2>Un festín para el paladar</h2>
-    <div class="receta">
-      <h3>Bandeja Paisa</h3>
-      <p><b>Ingredientes:</b> Frijoles cargamanto, carne molida, chicharrones, arroz, huevos, plátanos maduros, arepas, aguacate, aceite, sal.</p>
-      <p><b>Preparación:</b> Cocina los frijoles hasta que estén blandos. Fríe los chicharrones, los plátanos y los huevos. Cocina el arroz y la carne molida. Sirve todo en un plato grande con una arepa y aguacate fresco.</p>
-    </div>
-    <div class="receta">
-      <h3>Sancocho</h3>
-      <p><b>Ingredientes:</b> Costilla de res, pollo, carne de cerdo, papas, yucas, plátanos verdes, mazorcas, cilantro, cebolla, ajo.</p>
-      <p><b>Preparación:</b> Cocina las carnes en agua con sal, cebolla y ajo. Agrega los vegetales y cocina hasta que todo esté tierno. Sirve caliente con cilantro picado, arroz y aguacate.</p>
-    </div>
-    <div class="receta">
-      <h3>Arepa</h3>
-      <p><b>Ingredientes:</b> Harina de maíz precocida blanca, agua tibia, sal.</p>
-      <p><b>Preparación:</b> Mezcla la harina de maíz con agua tibia y sal hasta obtener una masa suave. Forma bolas y aplástalas. Ásalas en una plancha hasta que estén doradas.</p>
-    </div>
-    <div class="receta">
-      <h3>Mazamorra</h3>
-      <p><b>Ingredientes:</b> Maíz peto, leche, panela en polvo o bocadillo de guayaba.</p>
-      <p><b>Preparación:</b> Remoja el maíz la noche anterior y cocínalo hasta que esté blando. Agrega leche y deja hervir a fuego bajo. Sirve fría y endulza con panela o bocadillo.</p>
+  <!-- Escudo y frases -->
+  <section id="descubre" class="section">
+    <h2>Escudo y Frases</h2>
+    <div class="carousel">
+      <div class="carousel-item active">
+        <img src="escudo.png" alt="Escudo cultural">
+      </div>
+      <div class="carousel-item">
+        <blockquote>"La tierra no nos pertenece, nosotros pertenecemos a ella."</blockquote>
+      </div>
+      <div class="carousel-item">
+        <blockquote>"Nuestra raíz vive en cada paso sobre el suelo sagrado."</blockquote>
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
 
   <!-- Mitos -->
-  <section id="mitos">
+  <section class="section">
     <h2>Mitos y Leyendas</h2>
     <div class="mito">
-      <img src="img/la_madre_monte.jpg" alt="La Madre Monte">
-      <p><b>La Madre Monte:</b> Espíritu guardián de la naturaleza, que protege los bosques y castiga a quienes los dañan.</p>
+      <img src="mito1.png" alt="Imagen mito">
+      <p>Cuenta la tradición que en las noches de luna llena aparece el espíritu guardián del bosque...</p>
     </div>
     <div class="mito">
-      <img src="img/el_sombreron.jpg" alt="El Sombrerón">
-      <p><b>El Sombrerón:</b> Personaje misterioso que aparece en los caminos solitarios con un enorme sombrero.</p>
+      <img src="mito2.png" alt="Imagen mito">
+      <p>Se dice que los ríos guardan voces antiguas que susurran a quienes saben escuchar...</p>
     </div>
   </section>
 
-  <!-- Escudo en carrusel -->
-  <section id="escudo">
-    <h2>El Alma de Antioquia</h2>
-    <div class="carousel">
-      <div class="slide active">
-        <img src="img/escudo.png" alt="Escudo de Antioquia">
-      </div>
-      <div class="slide">
-        <blockquote>"La pujanza de nuestra gente es la fuerza que mueve montañas." <br>– Dicho Popular</blockquote>
-      </div>
-      <div class="slide">
-        <blockquote>"En cada arepa, un pedazo de nuestro corazón; en cada café, el alma de nuestra tierra." <br>– Tradición Paisa</blockquote>
-      </div>
-      <div class="slide">
-        <blockquote>"Ser antioqueño no es nacer en un lugar, es llevar la herencia de los arrieros en el alma." <br>– Reflexión Cultural</blockquote>
-      </div>
+  <!-- Recetas -->
+  <section class="section recetas">
+    <h2>Recetas Tradicionales</h2>
+    <div class="receta">
+      <h3>Sopa de Maíz</h3>
+      <p>Una preparación que combina el maíz, base de la cultura ancestral, con hierbas aromáticas.</p>
+    </div>
+    <div class="receta">
+      <h3>Bebida de Cacao</h3>
+      <p>El cacao, símbolo de abundancia, preparado con miel y especias.</p>
     </div>
   </section>
 
-  <!-- Historias tipo comentarios -->
-  <section id="historias">
-    <h2>Comparte tu historia</h2>
-    <form id="historiaForm">
-      <textarea id="historiaInput" placeholder="Escribe aquí tu historia..."></textarea>
-      <button type="submit">Publicar</button>
-    </form>
-    <div id="historiaList"></div>
+  <!-- Comentarios -->
+  <section class="section comentarios">
+    <h2>Historias de la Comunidad</h2>
+    <div class="comentarios-list">
+      <p>"Escuchar a mi abuela contar los mitos me hizo valorar nuestra historia." – Ana</p>
+      <p>"Probar estas recetas me conecta con mis raíces." – Luis</p>
+    </div>
   </section>
 
   <!-- Hospedaje -->
-  <section id="hospedaje">
-    <h2>¿Dónde hospedarse y qué hacer?</h2>
-    <p>Encuentra hoteles, fincas cafeteras y hostales en el corazón de Antioquia. Vive la experiencia del café, visita pueblos mágicos como Jardín y Santa Fe de Antioquia, y disfruta de caminatas por la naturaleza.</p>
+  <section class="section hospedaje">
+    <h2>Hospedaje Cultural</h2>
+    <p>Vive una experiencia única alojándote en casas tradicionales rodeadas de naturaleza.</p>
   </section>
 
-  <!-- Créditos -->
-  <footer>
-    <p>Un proyecto cultural del INEM José Félix de Restrepo.</p>
-    <p>© 2025 Antioquia. Todos los derechos reservados.</p>
-    <p>Creado por Sara Leguizamon</p>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>© 2025 Cultura Ancestral | Proyecto educativo</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
