@@ -1,121 +1,95 @@
-/* Colores tierra */
-:root {
-  --beige: #f5f1e1;
-  --cafe: #6b4f3a;
-  --verde-oliva: #556b2f;
-  --ocre: #c2a878;
-  --marron: #3e2c1c;
-}
-
+/* Fuente y estilo general */
 body {
-  font-family: 'Georgia', serif;
   margin: 0;
-  padding: 0;
-  background-color: var(--beige);
-  color: var(--marron);
+  font-family: 'Georgia', serif;
+  background-color: #f4f1ea;
+  color: #3e2f1c;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-repeat: repeat;
 }
 
-/* NAV */
+/* Encabezado */
 header {
-  background-color: var(--cafe);
-  padding: 15px;
-  color: white;
+  background: #8b5e3c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav h1 {
-  font-size: 1.5rem;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 nav ul {
   list-style: none;
+  padding: 0;
+  margin-top: 10px;
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
-nav a {
-  color: white;
+nav ul li a {
+  color: #f4f1ea;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd39b;
+}
+
+/* Secciones */
+.seccion {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.seccion h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #8b5e3c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Tarjetas */
+.card {
+  background: #e6d8c3;
+  border: 2px solid #8b5e3c;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #4b3a24;
+}
+
+/* Actividades */
+#actividades ul {
+  list-style: none;
+  padding: 0;
+}
+
+#actividades ul li {
+  padding: 10px;
+  background: #d9c7a6;
+  margin-bottom: 10px;
+  border-left: 5px solid #8b5e3c;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: var(--ocre);
-}
-
-.section {
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 2px solid var(--ocre);
-}
-
-/* GASTRONOMÍA */
-#gastronomia article {
-  background-color: var(--ocre);
-  color: var(--marron);
-  padding: 15px;
-  margin: 15px auto;
-  border-radius: 8px;
-  width: 80%;
-}
-
-/* MITOS */
-#mitos .mito {
-  margin: 20px auto;
-  width: 70%;
-  background: var(--beige);
-  border: 2px solid var(--cafe);
-  border-radius: 8px;
-  padding: 15px;
-}
-
-#mitos img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* ESCUDO */
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-  padding: 20px;
-}
-
-/* HISTORIAS */
-#comentarioInput {
-  width: 80%;
-  height: 80px;
-  margin: 10px 0;
-}
-
-#agregarComentario {
-  background: var(--verde-oliva);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-#agregarComentario:hover {
-  background: var(--cafe);
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-  background: var(--cafe);
-  color: white;
+  background: #8b5e3c;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
