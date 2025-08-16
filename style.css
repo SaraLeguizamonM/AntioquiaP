@@ -1,67 +1,52 @@
-/* Estilos generales */
+/* Fuente general */
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #f5f0e6;
-  color: #3b2c1a;
+  font-family: 'Merriweather', serif;
+  background-color: #F5F0E6;
+  color: #3E2C1C;
   line-height: 1.6;
 }
 
 /* Encabezado */
-header {
-  background-color: #8b5e3c;
-  color: white;
-  padding: 2rem;
+.header {
   text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(62,44,28,0.6), rgba(62,44,28,0.6)), url('fondo-textura.jpg') center/cover no-repeat;
+  color: #fff;
 }
-
-header h1 {
-  margin: 0;
+.header h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
-
-header button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background-color: #d9a066;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  background: #8B5A2B;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #A0522D;
 }
 
 /* Secciones */
-section {
-  padding: 2rem;
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
 }
-
-h2 {
-  color: #6e4424;
-  border-bottom: 2px solid #d9a066;
-  padding-bottom: 0.5rem;
-}
-
-/* Recetas */
-.receta {
-  background: #fffaf3;
-  border: 1px solid #d9a066;
-  border-radius: 10px;
-  margin: 1rem 0;
-  padding: 1rem;
-}
-
-/* Mitos */
-.mito {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-}
-
-.mito img {
-  width: 120px;
-  height: auto;
-  margin-right: 1rem;
-  border-radius: 8px;
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #8B5A2B;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
 /* Carrusel */
@@ -70,60 +55,103 @@ h2 {
   max-width: 500px;
   margin: auto;
 }
-
-.slide {
+.carousel-item {
   display: none;
-  text-align: center;
 }
-
-.slide.active {
+.carousel-item.active {
   display: block;
 }
-
-blockquote {
+.carousel img {
+  width: 100%;
+  border: 3px solid #8B5A2B;
+  border-radius: 10px;
+}
+.carousel blockquote {
   font-style: italic;
-  color: #3b2c1a;
-}
-
-/* Historias */
-#historias form {
-  display: flex;
-  flex-direction: column;
-}
-
-#historias textarea {
+  color: #3E2C1C;
+  background: #E6D3B3;
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #d9a066;
-  margin-bottom: 1rem;
 }
-
-#historias button {
-  padding: 0.7rem;
-  background-color: #8b5e3c;
-  color: white;
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8B5A2B;
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  font-size: 1.5rem;
   cursor: pointer;
+  padding: 0.5rem;
 }
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
 
-#historiaList {
-  margin-top: 1.5rem;
+/* Mitos */
+.mito {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 1.5rem auto;
 }
-
-.historia {
-  background: #fffaf3;
-  border-left: 4px solid #8b5e3c;
+.mito img {
+  width: 120px;
+  border-radius: 8px;
+  border: 2px solid #8B5A2B;
+}
+.mito p {
+  flex: 1;
+  background: #FFF8F0;
   padding: 1rem;
-  margin-bottom: 1rem;
+  border-left: 4px solid #8B5A2B;
   border-radius: 5px;
 }
 
-/* Footer */
-footer {
-  background-color: #3b2c1a;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
+/* Recetas */
+.recetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
+.receta {
+  background: #FFF8F0;
+  padding: 1rem;
+  border: 2px solid #8B5A2B;
+  border-radius: 8px;
+}
+.receta h3 {
+  margin-top: 0;
+  color: #A0522D;
+}
+
+/* Comentarios */
+.comentarios-list {
+  max-width: 700px;
+  margin: auto;
+  background: #E6D3B3;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.comentarios-list p {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Hospedaje */
+.hospedaje {
+  background: #E6D3B3;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Pie de página */
+.footer {
+  background: #3E2C1C;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
