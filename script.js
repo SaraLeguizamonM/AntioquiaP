@@ -1,34 +1,26 @@
-// Botón "Descubre Más"
-document.getElementById("discoverBtn").addEventListener("click", () => {
-  document.getElementById("orgullo").scrollIntoView({ behavior: "smooth" });
+// Carrusel
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+  items[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % totalItems;
+  items[currentIndex].classList.add('active');
 });
 
-// Carrusel automático
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+document.querySelector('.prev').addEventListener('click', () => {
+  items[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+  items[currentIndex].classList.add('active');
+});
 
-function showSlide(index) {
-  slides.forEach((s, i) => {
-    s.classList.remove("active");
-    if (i === index) s.classList.add("active");
+// Scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
   });
-}
-
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}, 4000);
-
-// Historias tipo comentarios
-document.getElementById("historiaForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const input = document.getElementById("historiaInput");
-  if (input.value.trim() !== "") {
-    const newHistoria = document.createElement("div");
-    newHistoria.classList.add("historia");
-    newHistoria.textContent = input.value;
-    document.getElementById("historiaList").appendChild(newHistoria);
-    input.value = "";
-  }
 });
-
