@@ -1,31 +1,33 @@
-// Scroll a "El orgullo de ser antioqueño"
-document.getElementById("descubreBtn").addEventListener("click", () => {
-  document.getElementById("orgullo").scrollIntoView({ behavior: "smooth" });
-});
+// Scroll hacia sección
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
 
 // Carrusel
-let items = document.querySelectorAll(".carousel-item");
-let current = 0;
+let slideIndex = 0;
+mostrarSlide(slideIndex);
 
-document.querySelector(".next").addEventListener("click", () => {
-  items[current].classList.remove("active");
-  current = (current + 1) % items.length;
-  items[current].classList.add("active");
-});
+function moverSlide(n) {
+  mostrarSlide(slideIndex += n);
+}
 
-document.querySelector(".prev").addEventListener("click", () => {
-  items[current].classList.remove("active");
-  current = (current - 1 + items.length) % items.length;
-  items[current].classList.add("active");
-});
-
-// Historias como comentarios
-document.getElementById("publicar").addEventListener("click", () => {
-  let texto = document.getElementById("nuevoComentario").value.trim();
-  if (texto) {
-    let div = document.createElement("div");
-    div.textContent = texto;
-    document.getElementById("comentarios").appendChild(div);
-    document.getElementById("nuevoComentario").value = "";
+function mostrarSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  if (n >= slides.length) { slideIndex = 0 }
+  if (n < 0) { slideIndex = slides.length - 1 }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
   }
-});
+  slides[slideIndex].classList.add("active");
+}
+
+// Comentarios dinámicos
+function agregarComentario() {
+  let nuevoComentario = document.getElementById("nuevoComentario").value;
+  if (nuevoComentario.trim() === "") return;
+  
+  let div = document.createElement("div");
+  div.textContent = nuevoComentario;
+  document.getElementById("comentarios").appendChild(div);
+  document.getElementById("nuevoComentario").value = "";
+}
