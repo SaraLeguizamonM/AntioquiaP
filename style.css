@@ -1,157 +1,89 @@
-/* Fuente general */
+/* Estilo tierra */
 body {
+  font-family: 'Georgia', serif;
   margin: 0;
-  font-family: 'Merriweather', serif;
-  background-color: #F5F0E6;
-  color: #3E2C1C;
-  line-height: 1.6;
+  background: #f4f1ea;
+  color: #3e2c1c;
 }
 
-/* Encabezado */
-.header {
+header.hero {
+  background: url('imagenes/paisaje.jpg') no-repeat center/cover;
+  color: white;
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(rgba(62,44,28,0.6), rgba(62,44,28,0.6)), url('fondo-textura.jpg') center/cover no-repeat;
-  color: #fff;
+  padding: 80px 20px;
 }
-.header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.header p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-.btn {
-  background: #8B5A2B;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
+
+header.hero button {
+  background: #8b5e3c;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
   border-radius: 6px;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #A0522D;
 }
 
-/* Secciones */
 .section {
-  padding: 3rem 2rem;
+  padding: 50px 20px;
   text-align: center;
 }
-.section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #8B5A2B;
-  display: inline-block;
-  padding-bottom: 0.3rem;
+
+.receta, .mito {
+  background: #fff8f0;
+  border: 1px solid #d2b48c;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
 }
 
-/* Carrusel */
-.carousel {
-  position: relative;
-  max-width: 500px;
-  margin: auto;
+.mito img {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel-item {
   display: none;
+  width: 80%;
+  text-align: center;
 }
+
 .carousel-item.active {
   display: block;
 }
-.carousel img {
-  width: 100%;
-  border: 3px solid #8B5A2B;
-  border-radius: 10px;
-}
-.carousel blockquote {
-  font-style: italic;
-  color: #3E2C1C;
-  background: #E6D3B3;
-  padding: 1rem;
+
+textarea {
+  width: 80%;
+  height: 80px;
+  margin: 15px auto;
+  display: block;
+  border: 1px solid #8b5e3c;
   border-radius: 8px;
+  padding: 10px;
+  background: #fff8f0;
 }
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #8B5A2B;
-  color: #fff;
+
+button {
+  background: #8b5e3c;
+  color: white;
   border: none;
-  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  padding: 0.5rem;
-}
-.carousel-btn.prev { left: 0; }
-.carousel-btn.next { right: 0; }
-
-/* Mitos */
-.mito {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 1.5rem auto;
-}
-.mito img {
-  width: 120px;
-  border-radius: 8px;
-  border: 2px solid #8B5A2B;
-}
-.mito p {
-  flex: 1;
-  background: #FFF8F0;
-  padding: 1rem;
-  border-left: 4px solid #8B5A2B;
-  border-radius: 5px;
 }
 
-/* Recetas */
-.recetas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-.receta {
-  background: #FFF8F0;
-  padding: 1rem;
-  border: 2px solid #8B5A2B;
-  border-radius: 8px;
-}
-.receta h3 {
-  margin-top: 0;
-  color: #A0522D;
-}
-
-/* Comentarios */
-.comentarios-list {
-  max-width: 700px;
-  margin: auto;
-  background: #E6D3B3;
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-.comentarios-list p {
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
-/* Hospedaje */
-.hospedaje {
-  background: #E6D3B3;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* Pie de página */
-.footer {
-  background: #3E2C1C;
-  color: #fff;
+footer {
+  background: #3e2c1c;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 1rem;
 }
-
