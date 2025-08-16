@@ -1,26 +1,26 @@
-// Carrusel
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
-
-document.querySelector('.next').addEventListener('click', () => {
-  items[currentIndex].classList.remove('active');
-  currentIndex = (currentIndex + 1) % totalItems;
-  items[currentIndex].classList.add('active');
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-  items[currentIndex].classList.remove('active');
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-  items[currentIndex].classList.add('active');
-});
-
 // Scroll suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+// Carrusel
+let currentSlide = 0;
+function nextSlide() {
+  const items = document.querySelectorAll(".carousel-item");
+  items[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % items.length;
+  items[currentSlide].classList.add("active");
+}
+
+// Comentarios
+function agregarComentario() {
+  const nuevoComentario = document.getElementById("nuevoComentario").value;
+  if (nuevoComentario.trim() !== "") {
+    const div = document.createElement("div");
+    div.className = "comentario";
+    div.textContent = nuevoComentario;
+    document.getElementById("comentarios").appendChild(div);
+    document.getElementById("nuevoComentario").value = "";
+  }
+}
+
