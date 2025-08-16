@@ -3,287 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Antioqueñidad en La Pintada</title>
-  <style>
-    /* ---- Estilos Generales ---- */
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #2b1e16;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #3e2c20;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: #f5f5f5;
-    }
-
-    nav a {
-      color: #f5f5f5;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #d1a36e;
-    }
-
-    .btn {
-      background-color: #d1a36e;
-      padding: 0.7rem 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background-color: #a5794f;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    h2 {
-      color: #f5f5f5;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero {
-      background: url("https://upload.wikimedia.org/wikipedia/commons/4/4a/Pintada_Antioquia.JPG") no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 5px #000;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background-color: #3e2c20;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: left;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .card button {
-      background: #5a7c4d;
-      border: none;
-      color: white;
-      padding: 0.5rem;
-      margin-top: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .accordion {
-      width: 80%;
-      margin: auto;
-      text-align: left;
-    }
-
-    details {
-      background: #3e2c20;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: #1a120c;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #b8a99a;
-    }
-  </style>
+  <title>Mi Proyecto</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Encabezado -->
   <header>
-    <h1>Antioquia</h1>
+    <h1>Bienvenido a mi página</h1>
     <nav>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#gastronomia">Gastronomía</a>
-      <a href="#mitos">Mitos</a>
-      <a href="#simbolo">Símbolo</a>
-      <a href="#historias">Historias</a>
-      <a href="#ubicacion">Ubicación</a>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
     </nav>
-    <button class="btn">Explorar</button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>La Fiesta de la Antioqueñidad</h1>
-    <p>Un viaje al corazón de nuestras tradiciones. Vive la riqueza cultural de Antioquia desde La Pintada.</p>
-    <button class="btn">Descubre Más</button>
-  </section>
+  <main>
+    <section class="intro">
+      <h2>Introducción</h2>
+      <p>Este es un ejemplo de página básica desplegada con GitHub Pages.</p>
+    </section>
 
-  <!-- Nosotros -->
-  <section id="nosotros">
-    <h2>El Orgullo de Ser Antioqueño</h2>
-    <p>
-      La cultura antioqueña es un tapiz tejido con hilos de tradición, innovación y pujanza.  
-      Desde las montañas cafeteras hasta los ríos que cruzan La Pintada, nuestra identidad se expresa 
-      en el calor de la gente, el sabor de la gastronomía y las historias que nos unen.  
-      Somos herederos de arrieros y silleteros, emprendedores incansables y soñadores que transforman ideas en realidades.  
-    </p>
-  </section>
+    <section class="galeria">
+      <h2>Galería</h2>
+      <div class="imagenes">
+        <img src="img/ejemplo1.png" alt="Ejemplo 1">
+        <img src="img/ejemplo2.png" alt="Ejemplo 2">
+      </div>
+    </section>
+  </main>
 
-  <!-- Gastronomía -->
-  <section id="gastronomia">
-    <h2>Un Festín para el Paladar</h2>
-    <p>La gastronomía antioqueña es generosa y diversa. Cada plato cuenta una historia y guarda la memoria de generaciones.</p>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Bandeja_paisa.jpg" alt="Bandeja Paisa">
-        <h3>Bandeja Paisa</h3>
-        <p>Frijoles, arroz, carne molida, chicharrón, huevo frito, plátano, arepa y aguacate.</p>
-        <button>Ver Receta</button>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Sancocho_de_gallina.JPG" alt="Sancocho">
-        <h3>Sancocho Antioqueño</h3>
-        <p>Sopa robusta con carnes, papa, yuca, plátano y mazorca. Se sirve con arroz y aguacate.</p>
-        <button>Ver Receta</button>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Arepa_antioque%C3%B1a.jpg" alt="Arepa Antioqueña">
-        <h3>Arepa Antioqueña</h3>
-        <p>La clásica compañera de mesa, hecha de maíz blanco y servida con mantequilla o quesito.</p>
-        <button>Ver Receta</button>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Mazamorra_antioque%C3%B1a.jpg" alt="Mazamorra">
-        <h3>Mazamorra</h3>
-        <p>Un postre tradicional con maíz pelado y leche, acompañado con panela o bocadillo.</p>
-        <button>Ver Receta</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mitos -->
-  <section id="mitos">
-    <h2>Mitos y Leyendas</h2>
-    <p>Historias fantásticas que nacen de nuestras montañas y ríos, enseñando lecciones a quienes se atreven a escuchar.</p>
-    <div class="accordion">
-      <details>
-        <summary>La Madremonte</summary>
-        <p>Protectora de los bosques, castiga a quienes dañan la naturaleza. Sus gritos resuenan en las montañas y desatan tormentas.</p>
-      </details>
-      <details>
-        <summary>El Sombrerón</summary>
-        <p>Pequeño hombre con sombrero gigante que encanta a mujeres y caballos con su guitarra y sus trenzas mágicas.</p>
-      </details>
-      <details>
-        <summary>La Llorona</summary>
-        <p>Espíritu errante de una mujer que llora por sus hijos a orillas de los ríos. Su lamento hiela la sangre de quien lo escucha.</p>
-      </details>
-      <details>
-        <summary>El Mohán</summary>
-        <p>Un ser travieso que habita en los ríos, protector de los peces y enemigo de los pescadores que explotan la naturaleza.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- Símbolo -->
-  <section id="simbolo">
-    <h2>Nuestro Escudo</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Escudo_de_Antioquia.png" alt="Escudo de Antioquia" width="200">
-    <p>
-      Adoptado en 1812, el escudo de Antioquia simboliza nuestra soberanía y riqueza cultural.  
-      Representa la minería, el río Cauca y la palmera como símbolo de libertad y trópico.  
-      Cada elemento cuenta una parte de nuestra historia.  
-    </p>
-  </section>
-
-  <!-- Historias -->
-  <section id="historias">
-    <h2>Historias de Nuestra Gente</h2>
-    <p>La historia de Antioquia la escribimos todos los días. Aquí algunos relatos de nuestra tradición:</p>
-    <div class="cards">
-      <div class="card">
-        <h3>El Tesoro del Arriero</h3>
-        <p>Un viejo arriero encontró semillas de café escondidas en las montañas, símbolo de riqueza y futuro para la región.</p>
-      </div>
-      <div class="card">
-        <h3>La Promesa del Silletero</h3>
-        <p>En la Feria de las Flores, un silletero cumplió la promesa de llevar la silleta más hermosa en honor a su familia.</p>
-      </div>
-      <div class="card">
-        <h3>El Eco de la Montaña</h3>
-        <p>Un padre enseñó a su hijo a escuchar el eco de las montañas, herencia de la memoria de los ancestros.</p>
-      </div>
-    </div>
-    <button class="btn">Comparte tu Historia</button>
-  </section>
-
-  <!-- Ubicación -->
-  <section id="ubicacion">
-    <h2>El Epicentro: La Pintada</h2>
-    <p>Descubre el corazón cultural de La Pintada, Antioquia.</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.157093543906!2d-75.6083!3d5.7478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4689f3d4fef2e5%3A0xa861b9f3b8f8c3f0!2sLa%20Pintada%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1690000000000!5m2!1ses!2sco" 
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <div class="cards">
-      <div class="card">
-        <h3>Hotel Real Dinastía</h3>
-        <p>Un lugar acogedor con vista a las montañas. Ideal para descansar en familia.</p>
-      </div>
-      <div class="card">
-        <h3>Finca Hotel La Posada</h3>
-        <p>Perfecta para un descanso en medio de la naturaleza. Tranquilidad garantizada.</p>
-      </div>
-      <div class="card">
-        <h3>Paseo en Lanchas</h3>
-        <p>Recorre el río Cauca en lancha, disfrutando del paisaje montañoso único.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Antioquia | Proyecto sobre la Antioqueñidad en La Pintada.  
-    Diseñado con amor por estudiantes de cultura y tradición.</p>
+    <p>© 2025 Mi Proyecto. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
