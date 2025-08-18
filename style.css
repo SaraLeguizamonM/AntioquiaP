@@ -62,7 +62,7 @@ h2 {
 
 /* Hero */
 .hero {
-  background: url('img/home.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/home.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -70,6 +70,7 @@ h2 {
   align-items: center;
   text-align: center;
   color: white;
+  /* Asegúrate de que la imagen esté en la carpeta 'img' con el nombre 'home.jpg' */
 }
 
 .hero h1 {
