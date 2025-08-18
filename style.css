@@ -62,7 +62,7 @@ h2 {
 
 /* Hero */
 .hero {
-  background: src='img/home.jpg' center/cover no-repeat;
+  background: url('img/home.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   flex-direction: column;
