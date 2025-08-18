@@ -62,7 +62,7 @@ h2 {
 
 /* Hero */
 .hero {
-  background: url("https://upload.wikimedia.org/wikipedia/commons/4/4a/Pintada_Antioquia.JPG") no-repeat center center/cover;
+  background: url('img/home.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   flex-direction: column;
