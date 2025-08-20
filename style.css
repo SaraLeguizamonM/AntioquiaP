@@ -1,109 +1,59 @@
-/* ===== Base ===== */
-html { scroll-behavior: smooth; }
-
+/* ===== General ===== */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #2b1e16; /* tono tierra oscuro */
-  color: #f5f5f5;
-  line-height: 1.6;
-}
-
-/* ===== Header ===== */
-header {
-  background-color: #3e2c20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* el modal irá mucho más arriba */
-}
-
-header h1 {
-  font-size: 1.5rem;
-  color: #f5f5f5;
-}
-
-nav a {
-  color: #f5f5f5;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover { color: #d1a36e; }
-
-.btn {
-  background-color: #d1a36e;
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #2b1e16;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn:hover {
-  background-color: #a5794f;
-  color: #fff;
-}
-
-/* ===== Secciones ===== */
-section {
-  padding: 3rem 2rem;
-  text-align: center;
+  padding: 0;
+  background: #f8f5f0;
+  color: #333;
 }
 
 h2 {
-  color: #f5f5f5;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* ===== Hero ===== */
-.hero {
-  background: url('https://www.antioquiacritica.com/wp-content/uploads/2021/08/maxresdefault.jpg');
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px #000;
+  margin: 2rem 0;
+  color: #5a4634;
 }
 
 /* ===== Cards ===== */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
 }
 
 .card {
-  background-color: #3e2c20;
-  padding: 1.5rem;
+  background: #fff;
   border-radius: 10px;
-  text-align: left;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  width: 250px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
 }
 
-/* Botón dentro de card (usa <a class="btn">...) */
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #3c2e23;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Botones de las cards */
 .card .btn {
   display: inline-block;
   background: #5a7c4d;
@@ -113,87 +63,60 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.card .btn:hover { background: #44633b; }
+.card .btn:hover {
+  background: #44633b;
+}
 
-/* ===== Modal (sin JS con :target) ===== */
-/* Importante: no usar display:none para que :target funcione/animé bien */
+/* ===== Modales ===== */
 .modal {
   position: fixed;
-  inset: 0;                 /* equivale a top:0; right:0; bottom:0; left:0 */
-  display: flex;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.6);
-  z-index: 9999;            /* por encima del header */
-
-  /* Oculto por defecto */
-  visibility: hidden;
+  z-index: 1000;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  transition: opacity 0.4s ease;
 }
 
-/* Al apuntar con el hash (#receta-...) */
 .modal:target {
-  visibility: visible;
+  display: flex;
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Tarjeta del modal */
 .modal-content {
   background: #fff;
-  color: #333;
-  padding: 24px 20px;
+  padding: 2rem;
   border-radius: 12px;
-  width: min(90%, 560px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-
-  /* Animación de entrada */
-  transform: translateY(-16px);
-  transition: transform 0.35s ease;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transform: translateY(-50px);
+  transition: transform 0.4s ease;
 }
 
-.modal:target .modal-content { transform: translateY(0); }
+.modal:target .modal-content {
+  transform: translateY(0);
+}
 
-/* Cerrar */
+/* Botón de cierre */
 .close {
   display: inline-block;
-  margin-top: 15px;
-  padding: 8px 16px;
-  background: #c0392b;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #d9534f;
   color: #fff;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.close:hover { background: #922b21; }
-
-/* Evitar scroll del fondo cuando el modal está abierto (navegadores modernos) */
-body:has(.modal:target) { overflow: hidden; }
-
-/* ===== Accordion (mitos) ===== */
-.accordion {
-  width: 80%;
-  margin: auto;
-  text-align: left;
-}
-
-details {
-  background: #3e2c20;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* ===== Footer ===== */
-footer {
-  background-color: #1a120c;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #b8a99a;
+.close:hover {
+  background: #b52b27;
 }
