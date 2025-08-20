@@ -1,4 +1,6 @@
-/* Estilos generales */
+/* ===== Base ===== */
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: 'Georgia', serif;
@@ -7,7 +9,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
   background-color: #3e2c20;
   display: flex;
@@ -16,7 +18,7 @@ header {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1000; /* el modal irá mucho más arriba */
 }
 
 header h1 {
@@ -31,9 +33,7 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #d1a36e;
-}
+nav a:hover { color: #d1a36e; }
 
 .btn {
   background-color: #d1a36e;
@@ -52,7 +52,7 @@ nav a:hover {
   color: #fff;
 }
 
-/* Secciones */
+/* ===== Secciones ===== */
 section {
   padding: 3rem 2rem;
   text-align: center;
@@ -64,7 +64,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Hero */
+/* ===== Hero ===== */
 .hero {
   background: url('https://www.antioquiacritica.com/wp-content/uploads/2021/08/maxresdefault.jpg');
   height: 80vh;
@@ -82,7 +82,7 @@ h2 {
   text-shadow: 2px 2px 5px #000;
 }
 
-/* Cards */
+/* ===== Cards ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -103,7 +103,7 @@ h2 {
   border-radius: 10px;
 }
 
-/* Botones dentro de cards */
+/* Botón dentro de card (usa <a class="btn">...) */
 .card .btn {
   display: inline-block;
   background: #5a7c4d;
@@ -115,56 +115,50 @@ h2 {
   text-decoration: none;
 }
 
-.card .btn:hover {
-  background: #44633b;
-}
+.card .btn:hover { background: #44633b; }
 
-/* Estilo base del modal */
+/* ===== Modal (sin JS con :target) ===== */
+/* Importante: no usar display:none para que :target funcione/animé bien */
 .modal {
-  display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0; 
-  top: 0;
-  width: 100%; 
-  height: 100%;
+  inset: 0;                 /* equivale a top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0,0,0,0.6);
+  z-index: 9999;            /* por encima del header */
 
-  /* Animación */
+  /* Oculto por defecto */
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
-/* Mostrar cuando es el target */
+/* Al apuntar con el hash (#receta-...) */
 .modal:target {
-  display: block;
+  visibility: visible;
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Contenido del modal */
+/* Tarjeta del modal */
 .modal-content {
   background: #fff;
   color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  width: 60%;
-  max-width: 500px;
-  margin: 10% auto;
-  position: relative;
-  text-align: center;
+  padding: 24px 20px;
+  border-radius: 12px;
+  width: min(90%, 560px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 
-  /* Animación */
-  transform: translateY(-50px);
-  transition: transform 0.4s ease;
+  /* Animación de entrada */
+  transform: translateY(-16px);
+  transition: transform 0.35s ease;
 }
 
-.modal:target .modal-content {
-  transform: translateY(0);
-}
+.modal:target .modal-content { transform: translateY(0); }
 
-/* Botón cerrar */
+/* Cerrar */
 .close {
   display: inline-block;
   margin-top: 15px;
@@ -172,14 +166,15 @@ h2 {
   background: #c0392b;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-.close:hover {
-  background: #922b21;
-}
+.close:hover { background: #922b21; }
 
-/* Accordion (mitos) */
+/* Evitar scroll del fondo cuando el modal está abierto (navegadores modernos) */
+body:has(.modal:target) { overflow: hidden; }
+
+/* ===== Accordion (mitos) ===== */
 .accordion {
   width: 80%;
   margin: auto;
@@ -194,7 +189,7 @@ details {
   cursor: pointer;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   background-color: #1a120c;
   text-align: center;
